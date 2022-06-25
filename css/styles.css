@@ -156,6 +156,18 @@ ul, ol {
 /* шапка */
 
 .hero {
+    background-image: linear-gradient(
+        to right, 
+        rgba(47, 48, 58, 0.4), 
+        transparent), 
+        url(../images/Hero-img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1600px;
+    height: 600px;
+    margin: 0 auto;
+
     background-color: var(--bg-color-2);
     text-align: center;
     padding-top: 200px;
@@ -219,6 +231,34 @@ ul, ol {
 
 .features-item:last-child {
     margin-right: 0;
+}
+
+.features-item::before {
+    display: block;
+    content: "";
+    margin-bottom: 30px;
+    height: 120px;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(245, 244, 250, 1);
+}
+
+.features-item:nth-child(1)::before {
+    background-image: url();
+}
+
+.features-item:nth-child(2)::before {
+    background-image: url();
+}
+
+.features-item:nth-child(3)::before {
+    background-image: url();
+}
+
+.features-item:nth-child(4)::before {
+    background-image: url();
 }
 
 .features-subtitle {
