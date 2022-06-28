@@ -138,7 +138,7 @@ ul, ol {
 
 .icon-envelope {
     margin-right: 10px;
-    fill: var(--text-color-1);
+    fill: currentColor;
     width: 16px;
     height: 12px;
 }
@@ -150,7 +150,7 @@ ul, ol {
 
 .icon-smartphone {
     margin-right: 10px;
-    fill:var(--text-color-1);
+    fill: currentColor;
     width: 10px;
     height: 16px;
 }
@@ -161,7 +161,9 @@ ul, ol {
 }
 
 .contacts-link {
-    font-style: normal;
+    display: flex;
+    align-items: center;
+
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -183,7 +185,7 @@ ul, ol {
     background-image: linear-gradient(
         to right, 
         rgba(47, 48, 58, 0.4), 
-        transparent), 
+        rgba(47, 48, 58, 0.4)), 
         url(../images/Hero-img.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -258,9 +260,11 @@ ul, ol {
 }
 
 .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 30px;
-    padding: 25px 100px;
-
+    
     width: 270px;
     height: 120px;
     background: #F5F4FA;
@@ -380,37 +384,38 @@ ul, ol {
     letter-spacing: 0.03em;
 }
 
-.container-social-media {
+/* Иконки социальных сетей */
+
+.social-media-list {
     display: flex;
     align-items: center;
+    justify-content: center;
+
     gap: 10px;
     margin-top: 16px;
-    margin-left: 32px;
-    margin-right: 32px;
 }
 
-.bg-social-media {
-    padding: 12px;
+.social-media-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #AFB1B8;
     width: 44px;
     height: 44px;
+}
+
+.social-media-link:hover,
+.social-media-link:focus {
+    color: #fff;
+    background-color: var(--text-color-3);
     border-radius: 50%;
 }
 
-.bg-social-media:hover,
-.bg-social-media:focus {
-    padding: 12px;
-    background-color: var(--text-color-3);
-}
-
-.icon-social-media {
-    fill: var(--text-color-1);
+.social-media-icon {
+    fill: currentColor;
     width: 20px;
     height: 20px;
-}
-
-.icon-social-media:hover,
-.icon-social-media:focus {
-    fill: white;
 }
 
 /* ПОРТФОЛИО */
@@ -483,12 +488,6 @@ ul, ol {
     margin-left: 30px;
 }
 
-.category-item:hover,
-.category-item:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-
 .category-item:nth-child(3n + 1) {
     margin-left: 0;
 }
@@ -498,7 +497,14 @@ ul, ol {
 }
 
 .category-link {
+    display: block;
+
     text-decoration: none;    
+}
+
+.category-link:hover,
+.category-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .category-img {
@@ -544,104 +550,35 @@ ul, ol {
 
 .clients-list {
     display: flex;
-    gap: 30px;
     align-items: center;
+    justify-content: center;
+    gap: 30px;
 }
 
-.clients-container {
-    width: 170px;
-    height: 92px;
+.clients-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    color: #AFB1B8;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
+
+    width: 170px;
+    height: 92px;
 }
 
-.clients-container:hover,
-.clients-container:focus {
+.clients-link:hover,
+.clients-link:focus {
+    color: #2196F3;
     border: 1px solid #2196F3;
 }
 
-.clients {
-    fill: #AFB1B8;
+.clients-icon {
+    fill: currentColor;
+    width: 106px;
+    height: 60px;
 }
-
-.clients:hover,
-.clients:focus {
-    fill: #2196F3;
-}
-
-.clients-container.ya-co {
-    padding-top: 23px;
-    padding-right: 65px;
-    padding-bottom: 22px;
-    padding-left: 64px;
-}
-
-.clients.ya-co {
-    width: 41px;
-    height: 46.7px;
-}
-
-.clients-container.company-tagline {
-    padding-top: 19px;
-    padding-right: 65px;
-    padding-bottom: 21px;
-    padding-left: 65px;
-}
-
-.clients.company-tagline {
-    width: 40px;
-    height: 52px;
-}
-
-.clients-container.company {
-    padding-top: 25px;
-    padding-right: 65px;
-    padding-bottom: 26px;
-    padding-left: 62px;
-}
-
-.clients.company {
-    width: 43px;
-    height: 41px;
-}
-
-.clients-container.foster-peters {
-    padding-top: 25px;
-    padding-right: 43px;
-    padding-bottom: 26px;
-    padding-left: 43px;
-}
-
-.clients.foster-peters {
-    width: 84px;
-    height: 40px;
-}
-
-.clients-container.brand {
-    padding-top: 23px;
-    padding-right: 54px;
-    padding-bottom: 24px;
-    padding-left: 54px;
-}
-
-.clients.brand {
-    width: 63px;
-    height: 45px;
-}
-
-.clients-container.company-tag {
-    padding-top: 23px;
-    padding-right: 38px;
-    padding-bottom: 25px;
-    padding-left: 38px;
-}
-
-.clients.company-tag {
-    width: 94px;
-    height: 44px;
-}
-
 
 /* Footer */
 
@@ -724,26 +661,17 @@ color: var(--text-color-3);
     color: #FFFFFF;
 }
 
-.footer-social-media {
-    display: flex;
-    gap: 10px;
-}
-
-.footer-social-media > .bg-social-media {
+.social-media-link.footer-icon {
+    color: #fff;
     background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
 }
 
-.footer-social-media>.bg-social-media:hover,
-.footer-social-media>.bg-social-media:focus {
+.social-media-link.footer-icon:hover,
+.social-media-link.footer-icon:focus {
     background-color: var(--text-color-3);
 }
 
-.footer-icon-social-media {
-    fill: white;
-    width: 20px;
-    height: 20px;
+.social-media-icon.footer-icon {
+    fill: currentColor;
 }
-
-
-
-
